@@ -1,0 +1,199 @@
+\documentclass[11pt]{strongalecv}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\begin{document}
+
+    %-------------------------------------------
+    %	COLOR MACROS
+    %-------------------------------------------
+    \definecolor{night}{HTML}{2E234C}
+    \definecolor{acid}{HTML}{5CFF23}
+    \definecolor{shadow}{HTML}{1C0D17}
+    \DefineColorMacros{White}{shadow}{acid}{night}{GreenArmy!50}
+
+    %----------------------------------------------------------------------------------------
+    %	TOP BAR
+    %----------------------------------------------------------------------------------------
+    \begin{TopBar}{\ColorTextSide}
+        \Name{\ColorHighlight}{Alessio Falchi}{Frontend Developer}
+
+        %%% Contact
+        \SimpleSeparator{\ColorHighlight}
+       
+
+    \end{TopBar}
+
+    \begin{TopDesc}{\ColorTextSide}
+        Inventive and versatile web developer with over eight years of experience. Very focused on responsive, a11y, and semantic UI development. I worked as a single or small team developer and on multi-companies projects. Capable of managing pre-production meetings with designers, and reviews with clients and designers. Experience in leading, mentoring, and reviewing trainee developers.
+        \\Enjoyer in interaction design, unusual interfaces, and innovative UX. Problem solver and a quick learner. Very passionate about gamification, storytelling, and aesthetics.
+
+    \end{TopDesc}
+    \begin{TopSide}{\ColorTextSide}
+        \begin{ItemList}{\ColorHighlight}
+            \item [\faMapMarker] London, UK
+            \item [\faAt] \href{mailto:alessio@strongale.it}{alessio@strongale.it}
+            \item [\faPhone] +44 7375 023061
+            \item [\faGithub] \href{https://github.com/StrongPaleAle}{StrongPaleAle}
+            \item [\faLinkedinSquare] \href{https://www.linkedin.com/in/alessio-falchi/}{linkedin.com/in/alessio-falchi}
+            \item [\faLink] \href{https://strongale.it/}{strongale.it}
+        \end{ItemList}
+    \end{TopSide}
+
+    %----------------------------------------------------------------------------------------
+    %	SIDE BAR
+    %----------------------------------------------------------------------------------------
+    \begin{SideBar}{\ColorBackground}{\ColorTextSide}
+        
+        %%% Skills
+        \TextSeparatorBis{\ColorHighlight}{Skills}{}
+        
+        \Label{\ColorHighlight}{Skill 1}
+        \Label{\ColorHighlight}{Skill 2}
+        \Label{\ColorHighlight}{Skill 3}
+        \Label{\ColorHighlight}{Skill 4}
+        \Label{\ColorHighlight}{Skill 5}
+        
+        \SimpleSeparator{\ColorHighlight}
+
+
+        \begin{ItemList}{\ColorHighlight}
+            \item [\faCode] skill, skill, skill, skill
+            \item [\faFileCodeO]  skill, skill, skill, skill
+            \item [\faCubes]  skill, skill, skill, skill
+            \item [\faPencilSquareO]  skill, skill, skill, skill
+            \item [\faVideoCamera]  skill, skill, skill, skill
+            \item [\faGear]  skill, skill, skill, skill
+        \end{ItemList}
+
+        \SimpleSeparator{\ColorHighlight}
+
+
+        \begin{SpiderDiagram}{\ColorTextSide}{\ColorHighlight}
+            \addSkill{Aaa}{5}
+            \addSkill{Bbb}{3}
+            \addSkill{Ccc}{2}
+            \addSkill{Ddd}{4}
+            \addSkill{Eee}{5}
+        \end{SpiderDiagram}
+
+        \vspace*{1cm}
+
+        %%% Languages
+        \TextSeparatorBis{\ColorHighlight}{Other skills}{}
+
+        \begin{SkillGauges}{\ColorHighlight}
+            \addGauge[\faStar]{English}{5}
+            \addGauge[\faStar]{French}{4}
+            \addGauge[\faStar]{Spanish}{1}
+        \end{SkillGauges}
+    \end{SideBar}
+
+    
+
+    %----------------------------------------------------------------------------------------
+    %	Picture
+    %----------------------------------------------------------------------------------------
+    %\DefineProfile{\ColorOther}{\ColorTextSide}{img/spider.png}
+
+
+
+
+    %----------------------------------------------------------------------------------------
+    %	Main
+    %----------------------------------------------------------------------------------------
+    \begin{MainPart}
+
+    %%% Experiences 
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Experiences}
+    \Experience
+        {\ColorTextMain}
+		{Useful Director}
+		{Nice Company}
+        {2015-\faUndo}
+        {   
+            \begin{ItemList}{\ColorHighlight}
+                \item [\faCode] skill, skill, skill, skill
+                \item [\faFileCodeO]  skill, skill, skill, skill
+                \item [\faCubes]  skill, skill, skill, skill
+                \item [\faPencilSquareO]  skill, skill, skill, skill
+                \item [\faVideoCamera]  skill, skill, skill, skill
+                \item [\faGear]  skill, skill, skill, skill
+            \end{ItemList}
+        }
+    \Experience
+        {\ColorHighlight}
+		{Teacher}
+		{Nice School}
+        {2004-2015}
+        {   
+            Write here your description.\\
+            \lorem
+        }
+    \Experience
+        {\ColorHighlight}
+		{Happiness manager}
+		{Nowhere}
+        {1968}
+        {   
+            Write here your description.\\
+            \lorem\\
+            \lorem
+        }
+
+
+    
+    %%% Education
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Education}
+    \Experience
+        {\ColorHighlight}
+		{OMG degree}
+		{Nice university}
+        {1903}
+        {   
+            Write here your description.\\
+            \lorem
+        }
+    \Experience
+        {\ColorHighlight}
+		{LOL degree}
+		{Nice university}
+        {1902}
+        {   
+            Write here your description.\\
+            \lorem
+        }
+    \Experience
+        {\ColorHighlight}
+		{WTF degree}
+		{Nice university}
+        {1901}
+        {   
+            Write here your description.\\
+            \lorem\\
+            \lorem
+        }
+
+
+    %%% Activities
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Activities}
+    \vspace*{0.5cm}
+    \begin{DoubleColumns}
+        \begin{ItemList}{\ColorHighlight}
+            \item [] Doing LaTex templates
+            \item [] Playing video games
+        \end{ItemList}
+        \nextcolumn
+        \begin{ItemList}{\ColorHighlight}
+            \item [] Other fun stuff
+        \end{ItemList}
+    \end{DoubleColumns}
+
+    \end{MainPart}
+
+    
+
+\end{document}
+
+
