@@ -1,7 +1,7 @@
 \documentclass[11pt]{strongalecv}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-
+\usepackage{enumitem}
 
 \begin{document}
 
@@ -11,7 +11,7 @@
     \definecolor{night}{HTML}{2E234C}
     \definecolor{acid}{HTML}{5CFF23}
     \definecolor{shadow}{HTML}{1C0D17}
-    \DefineColorMacros{White}{shadow}{acid}{night}{GreenArmy!50}
+    \DefineColorMacros{White}{shadow}{acid}{night}{GreenArmy!50}{purple}
 
     %----------------------------------------------------------------------------------------
     %	TOP BAR
@@ -106,46 +106,53 @@
     \begin{MainPart}
 
     %%% Experiences 
-    \MainTitle{\ColorHighlight}{\ColorTextMain}{Experiences}
+    \MainTitle{\ColorHighlightMain}{\ColorTextSide}{Experiences}{\ColorHighlightMain}
     \Experience
         {\ColorTextMain}
-		{Useful Director}
-		{Nice Company}
-        {2015-\faUndo}
+		{Web Developer, UI/UX and Cross-media designer}
+		{Freelancer}
+        {\faCalendarO\space Jan 2016 - Present}
         {   
-            \begin{ItemList}{\ColorHighlight}
-                \item [\faCode] skill, skill, skill, skill
-                \item [\faFileCodeO]  skill, skill, skill, skill
-                \item [\faCubes]  skill, skill, skill, skill
-                \item [\faPencilSquareO]  skill, skill, skill, skill
-                \item [\faVideoCamera]  skill, skill, skill, skill
-                \item [\faGear]  skill, skill, skill, skill
-            \end{ItemList}
+            \begin{itemize}[leftmargin=0.5cm, itemsep=0.1cm]
+                \item [{\color{purple}\tiny\faSquare}] \small Implemented websites and landing pages, from concept through deployment.
+                \item [{\color{purple}\tiny\faSquare}] \small Helped small and new businesses to have an online presence, and be among the first results of the local organic SERP.
+                \item [{\color{purple}\tiny\faSquare}] \small Designed brand identities for new activities and charities.
+                \item [{\color{purple}\tiny\faSquare}] \small Assisted clients understanding the better solution for starting a new project, or managing/renewing an existing platform.
+            \end{itemize}
+        }
+        
+    \Experience
+        {\ColorTextMain}
+		{External Web Developer}
+		{Quivi}
+        {\faCalendarO\space Mar 2014 - Mar 2022 - \faMapMarker\space  Lucca(IT)/Remote}
+        {   
+            \begin{itemize}[leftmargin=0.5cm, itemsep=0.1cm]
+                \item [{\color{purple}\tiny\faSquare}] \small High development experience in UI/UX development, using different CSS (Tailwind, Bootstrap, and Foundation), Javascript (Vue, AngularJs), and PHP(Laravel) frameworks.
+                \item [{\color{purple}\tiny\faSquare}] \small Independently developed themes for different CMSs (WordPress, Drupal, and OctoberCMS).
+                \item [{\color{purple}\tiny\faSquare}] \small Assessed UX and UI designs for technical feasibility.
+                \item [{\color{purple}\tiny\faSquare}] \small Liaised with clients for reviews, and independently manage bug fixing, multi-device, and cross-browser optimization processes.
+                \item [{\color{purple}\tiny\faSquare}] \small Wrote a guide to help designers to compose more CSS frameworks and CMS-friendly layouts.
+                \item [{\color{purple}\tiny\faSquare}] \small Led, mentored, and reviewed trainee developers.
+            \end{itemize}
         }
     \Experience
-        {\ColorHighlight}
-		{Teacher}
-		{Nice School}
-        {2004-2015}
+        {\ColorTextMain}
+		{Temp festival organizing staff}
+		{Lucca Comics \& Games}
+        {\faCalendarO\space Editions 2013 - 2020 - \faMapMarker\space  Lucca(IT)}
         {   
-            Write here your description.\\
-            \lorem
+            \begin{itemize}[leftmargin=0.5cm, itemsep=0.1cm]
+                \item [{\color{purple}\tiny\faSquare}] \small Managed public venues key handover, between the various exhibitors
+                \item [{\color{purple}\tiny\faSquare}] \small Checked the correct preparation of the exhibition spaces by the contractor.
+                \item [{\color{purple}\tiny\faSquare}] \small Supported exhibitors in hitches and disservices management, or submitting new requests to the organization of the festival.
+                \item [{\color{purple}\tiny\faSquare}] \small Improved several soft skills necessary for fieldwork in a big event, such as teamwork with new people, communication, crisis avoidance and management, public relations, customer service, recognizing safety issues, fire safety, and troubleshooting.
+            \end{itemize}
         }
-    \Experience
-        {\ColorHighlight}
-		{Happiness manager}
-		{Nowhere}
-        {1968}
-        {   
-            Write here your description.\\
-            \lorem\\
-            \lorem
-        }
+        
 
-
-    
     %%% Education
-    \MainTitle{\ColorHighlight}{\ColorTextMain}{Education}
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Education}{\ColorTextMain}
     \Experience
         {\ColorHighlight}
 		{OMG degree}
@@ -164,31 +171,21 @@
             Write here your description.\\
             \lorem
         }
-    \Experience
-        {\ColorHighlight}
-		{WTF degree}
-		{Nice university}
-        {1901}
-        {   
-            Write here your description.\\
-            \lorem\\
-            \lorem
-        }
 
 
     %%% Activities
-    \MainTitle{\ColorHighlight}{\ColorTextMain}{Activities}
-    \vspace*{0.5cm}
-    \begin{DoubleColumns}
-        \begin{ItemList}{\ColorHighlight}
-            \item [] Doing LaTex templates
-            \item [] Playing video games
-        \end{ItemList}
-        \nextcolumn
-        \begin{ItemList}{\ColorHighlight}
-            \item [] Other fun stuff
-        \end{ItemList}
-    \end{DoubleColumns}
+    % \MainTitle{\ColorHighlight}{\ColorTextMain}{Activities}{\ColorTextMain}
+    % \vspace*{0.5cm}
+    % \begin{DoubleColumns}
+    %     \begin{ItemList}{\ColorHighlight}
+    %         \item [] Doing LaTex templates
+    %         \item [] Playing video games
+    %     \end{ItemList}
+    %     \nextcolumn
+    %     \begin{ItemList}{\ColorHighlight}
+    %         \item [] Other fun stuff
+    %     \end{ItemList}
+    % \end{DoubleColumns}
 
     \end{MainPart}
 

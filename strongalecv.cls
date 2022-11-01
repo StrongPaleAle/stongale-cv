@@ -49,20 +49,22 @@
 \definecolor{GreenArmy}{HTML}{252e25}
 \definecolor{GreenIT}{HTML}{4caf50}
 \definecolor{night}{HTML}{2E234C}
+\definecolor{purple}{HTML}{403980}
 \definecolor{acid}{HTML}{5CFF23}
 \definecolor{shadow}{HTML}{1C0D17}
 
 %%%%% color macros, use it at the beginning of your cv to quickly use the enterprise colors (Pro HRD tips)
-\newcommand{\DefineColorMacros}[5]{% COLORS : TextSide / TextMain / HighLight / Background /Other
+\newcommand{\DefineColorMacros}[6]{% COLORS : TextSide / TextMain / HighLight / Background /Other
     \def\ColorTextSide{#1}
     \def\ColorTextMain{#2}
     \def\ColorHighlight{#3}
     \def\ColorBackground{#4}
     \def\ColorOther{#5}
+    \def\ColorHighlightMain{#6}
     \color{\ColorTextMain} % Default text color
 }
 
-\DefineColorMacros{White}{shadow}{acid}{night}{GreenArmy}
+\DefineColorMacros{White}{shadow}{acid}{night}{GreenArmy}{purple}
 
 
 
@@ -322,14 +324,15 @@
         \draw [very thick, draw=#2, inner sep=0pt] (box1) -- (square);
     \end{tikzpicture}\\
 }
-\newcommand{\MainTitle}[3]{%Background color, Highlight color, Title text
+\newcommand{\MainTitle}[4]{%Background color, Highlight color, Title text, Border
     \begin{tikzpicture}[baseline]    
-            \def\backcolor{\ifx\PM\undefined#1\else White\fi}  
-            \node[draw=#2,rounded corners,fill=\backcolor,inner sep=3pt, very thick, anchor=west]
+            \def\backcolor{\ifx\PM\undefined#1\else White\fi} 
+            \def\bordercolor{\ifx\PM\undefined#4\else White\fi}  
+            \node[draw=#4,rounded corners,fill=\backcolor,inner sep=4pt, very thick, anchor=west]
             at (0,0) (box1)
             {\textbf{\Large\color{#2}#3}};
-            \node at (\textwidth,0) [rectangle, draw=#2,rounded corners=0.5mm,fill=\backcolor, anchor=east, very thick] (square) {};
-        \draw [very thick, draw=#2, inner sep=0pt] (box1) -- (square);
+            \node at (\textwidth,0) [rectangle, draw=#4,rounded corners=0.5mm,fill=\backcolor, anchor=east, very thick] (square) {};
+        \draw [very thick, draw=#4, inner sep=0pt] (box1) -- (square);
     \end{tikzpicture}\\
 }
 
@@ -337,9 +340,9 @@
 %%%%%%% Experience
 \newcommand{\Experience}[5]{ %Highlight color,  Ttile, Left subtitle, Right subtitle, Description
     \begin{flushleft}
-        \large{\textbf{#2\hfill{\small\color{#1}#4}}}\\\vspace{-.4ex}
-        \small{{\color{#1}\hrulefill}
-        \hspace{1ex}\raisebox{-.4ex}{\color{shadow}\textbf{#3}}
+        \normalsize{\textbf{#2\hfill{\footnotesize\color{purple}#4}}}\\\vspace{-.4ex}
+        \small{{\color{purple}\hrulefill}
+        \hspace{1ex}\raisebox{-.4ex}{\small\color{purple}\textbf{#3}}
         }\\
 	    \normalsize{#5}% Description
     \end{flushleft}
@@ -385,6 +388,16 @@
     \begin{description}}
   {\end{description}}
 
+\newenvironment{ExpList}[1] % Bullet color
+  { \renewcommand{\descriptionlabel}[1]{
+    \def\temp{##1}\ifx\temp\empty
+       {\color{#1}\tiny\faSquare}% Default bullet
+    \else
+        {\color{#1}##1}
+    \fi
+    }%
+    \begin{description}}
+  {\end{description}}
 
 %%% DoubleColumns
 \newenvironment{DoubleColumns}{

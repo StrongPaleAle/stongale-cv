@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1665678107 "/Users/alessiofalchi/Devprojects/strongale-cv/strongale.tex" "strongale.pdf" "strongale" 1665678109
-  "/Users/alessiofalchi/Devprojects/strongale-cv/strongale.tex" 1665678066 6265 c565365cd3f8b6507aab0f6b9de0e803 ""
+["pdflatex"] 1667316575 "/Users/alessiofalchi/Devprojects/strongale-cv/strongale.tex" "strongale.pdf" "strongale" 1667316576
+  "/Users/alessiofalchi/Devprojects/strongale-cv/strongale.tex" 1667316575 8401 1a0f16092ca53cf6225fd701584e5711 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc" 1463430686 1687 f004baecce60175c6453d0e3f808cf20 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomethree.enc" 1463430686 2437 443c81fb50993bacedc5f9a206c322b0 ""
@@ -130,6 +130,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty" 1622581934 5157 f308c7c04889e16c588e78aa42599fae ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty" 1622581934 5049 969aec05d5f39c43f8005910498fcf90 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/size11.clo" 1636758526 8464 74db94825c407b51399ca17d9bd38a3d ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty" 1561238569 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/extsizes/extarticle.cls" 1137110130 20602 3112294ba237d94ce4a1502cfef3594f ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome/fontawesome.sty" 1463430686 2757 ee97743276dc242c78f33fd622e260ea ""
@@ -184,10 +185,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1664818341 2826440 144fb5e3d2cdb54745aebff8e79fa784 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "strongale.aux" 1665678108 729 69d40ca2bba9c9f4ff4dbba6bc6900d8 "pdflatex"
+  "strongale.aux" 1667316576 729 69d40ca2bba9c9f4ff4dbba6bc6900d8 "pdflatex"
   "strongale.out" 0 -1 0 "pdflatex"
-  "strongale.tex" 1665678066 6265 c565365cd3f8b6507aab0f6b9de0e803 ""
-  "strongalecv.cls" 1665678106 13613 8a4572c4cf82fee03cb3fc5b3170bd26 ""
+  "strongale.tex" 1667316575 8401 1a0f16092ca53cf6225fd701584e5711 ""
+  "strongalecv.cls" 1667315430 14051 dd61dc461fc35cef9e14d2ded21a54ec ""
   (generated)
   "strongale.aux"
   "strongale.log"
