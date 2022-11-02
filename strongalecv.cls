@@ -138,9 +138,9 @@
             (0,-\anglesize) --
             (\anglesize,0) --
             (\paperwidth,0) --
-            (\paperwidth,-\topheight-2\margin) --
-            (\sidewidth+2\margin+\anglesize,-\topheight-2\margin) --
-            (\sidewidth+2\margin,-\topheight-2\margin-\anglesize) --
+            (\paperwidth,-\topheight-2.5\margin) --
+            (\sidewidth+2\margin+\anglesize,-\topheight-2.5\margin) --
+            (\sidewidth+2\margin,-\topheight-2.5\margin-\anglesize) --
             (\sidewidth+2\margin,-\paperheight) --
             cycle;
         \draw [draw=#1, shift={(current page.north west)}, very thick]
@@ -148,7 +148,8 @@
             (\paperwidth-0.5\margin,-\paperheight+0.5\margin+0.5\anglesize) --
             (\paperwidth-0.5\margin-0.5\anglesize,-\paperheight+0.5\margin) --
             (\sidewidth+3\margin,-\paperheight+0.5\margin);
-    \end{tikzpicture}%
+    \end{tikzpicture}
+    %
     %%%%%%%%%%%%%
     % \TPmargin{}{}
     \begin{textblock*}{\sidewidth}(\margin,\topheight + 3\margin -0.4cm)
@@ -234,10 +235,12 @@
 %%% Name
 \newcommand{\Name}[3]% Highlight color, Name, Profession
 {
+    
     {\HUGE{\textbf{\color{#1}#2}}
     \hfill
     \Large{#3}
     }
+    
 }
 
 %%%%%%%%% Side bar
@@ -335,6 +338,17 @@
         \draw [very thick, draw=#4, inner sep=0pt] (box1) -- (square);
     \end{tikzpicture}\\
 }
+\newcommand{\SideTitle}[4]{%Background color, Highlight color, Title text, Border
+    \begin{tikzpicture}[baseline]    
+            \def\backcolor{\ifx\PM\undefined#1\else White\fi} 
+            \def\bordercolor{\ifx\PM\undefined#4\else White\fi}  
+            \node[draw=#4,rounded corners,fill=\backcolor,inner sep=4pt, very thick, anchor=west]
+            at (0,0) (box1)
+            {\textbf{\normalsize\color{#2}#3}};
+            \node at (\textwidth,0) [rectangle, draw=#4,rounded corners=0.5mm,fill=\backcolor, anchor=east, very thick] (square) {};
+        \draw [very thick, draw=#4, inner sep=0pt] (box1) -- (square);
+    \end{tikzpicture}\\\vspace*{0.3cm}
+}
 
 \def\hrulefill{\leavevmode\leaders\hrule height 0.35mm\hfill\kern\z@} % ~ very thick
 %%%%%%% Experience
@@ -371,10 +385,14 @@
 
 \newcommand{\SimpleSeparator}[1]% Highlight color
 {
-    \noindent\makebox[\linewidth]{
+    \hspace{-0.1cm}\makebox[\linewidth]{
     {\color{#1}\hrulefill}}
 }
-
+\newcommand{\TopSeparator}[1]% Highlight color
+{
+    \vspace{-0.2cm}\hspace{-0.1cm}\makebox[\linewidth]{
+    {\color{#1}\hrulefill}}
+}
 %%% ItemList
 \usepackage{enumerate}
 \newenvironment{ItemList}[1] % Bullet color
@@ -435,7 +453,7 @@
     \def\highlightColor{\color{#1}}
     \begin{tabular}{l l}
 }{
-    \end{tabular}
+    \end{tabular}\\\vspace*{0.3cm}
 }
 \newcommand{\addGauge}[3][\faSquareO]{% Optional fa symbol | Text | Number of symbols
     #2 & \foreach \i in{1,...,#3}{\highlightColor#1\space} \\
