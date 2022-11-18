@@ -344,10 +344,10 @@
             \def\bordercolor{\ifx\PM\undefined#4\else White\fi}  
             \node[draw=#4,rounded corners,fill=\backcolor,inner sep=4pt, very thick, anchor=west]
             at (0,0) (box1)
-            {\textbf{\normalsize\color{#2}#3}};
+            {\textbf{\Large\color{#2}#3}};
             \node at (\textwidth,0) [rectangle, draw=#4,rounded corners=0.5mm,fill=\backcolor, anchor=east, very thick] (square) {};
         \draw [very thick, draw=#4, inner sep=0pt] (box1) -- (square);
-    \end{tikzpicture}\\\vspace*{0.3cm}
+    \end{tikzpicture}\\
 }
 
 \def\hrulefill{\leavevmode\leaders\hrule height 0.35mm\hfill\kern\z@} % ~ very thick
@@ -378,9 +378,9 @@
 
 \newcommand{\TextSeparatorBis}[3]% Highlight color, Left text, Right text
 {
-    \noindent\makebox[\linewidth]{\raisebox{-.4ex}{\textbf{\large{#2}}}\hspace{1ex}
+    \noindent\makebox[\linewidth]{\raisebox{-.4ex}{\textbf{\normalsize{#2}}}\hspace{1ex}
     {\color{#1}\hrulefill}
-    \hspace{1ex}\raisebox{-.4ex}{\textbf{\large{#3}}}}
+    \hspace{1ex}\raisebox{-.4ex}{\textbf{\normalsize{#3}}}}
 }
 
 \newcommand{\SimpleSeparator}[1]% Highlight color
@@ -456,5 +456,5 @@
     \end{tabular}\\\vspace*{0.3cm}
 }
 \newcommand{\addGauge}[3][\faSquareO]{% Optional fa symbol | Text | Number of symbols
-    #2 & \foreach \i in{1,...,#3}{\highlightColor#1\space} \\
+\small#2 & \foreach \i in{1,...,#3}{\highlightColor\footnotesize#1\space} \\
 }
