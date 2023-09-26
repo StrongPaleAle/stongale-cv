@@ -1,0 +1,42 @@
+/* Layout */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+    background: rgb(204,204,204); 
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0 auto;
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: 12px;
+  }
+  
+  a {
+    color: inherit;
+  }
+
+  /* Printing */
+  page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+  }
+  
+  page[size="A4"] {  
+    width: 21cm;
+    height: 29.7cm; 
+  }
+  
+  @page {
+     size: 21cm 29.7cm;
+     padding: 0;
+     margin: 0mm;
+     border: none;
+     border-collapse: collapse;
+  }
+  /* End Printing */

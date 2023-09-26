@@ -1,0 +1,127 @@
+:root {
+  --bg-heavy: hsl(320, 37%, 8%);
+  --bg-medium: hsl(256, 46%, 19%);
+  --bg-light: hsl(312, 57%, 26%);
+  --text-negative: hsl(143, 67%, 98%);
+  --text-color: hsl(256, 46%, 19%);
+  --accent-dark: hsl(123, 100%, 36%);
+  --accent-color: hsl(97, 100%, 50%);
+  --accent-light: hsl(104, 95%, 85%);
+  --extra-dark: hsl(312, 57%, 26%);
+  --extra-color: hsl(319, 100%, 61%);
+  --extra-light: hsl(319, 100%, 92%);
+  --font-text: "Roboto Mono", monospace;
+  --font-heading: "Rubik", sans-serif;
+}
+
+/* Layout */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(204, 204, 204);
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0 auto;
+  font-family: var(--font-text);
+  color: var(--text-color);
+  font-size: 12px;
+}
+
+a {
+  color: inherit;
+}
+
+/* Printing */
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+}
+
+page[size=A4] {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+@page {
+  size: 21cm 29.7cm;
+  padding: 0;
+  margin: 0mm;
+  border: none;
+  border-collapse: collapse;
+}
+/* End Printing */
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: var(--bg-medium);
+  color: var(--text-negative);
+  padding: 0.75cm;
+  clip-path: polygon(0 1cm, 1cm 0, 100% 0, 100% calc(100% - 1cm), calc(100% - 1cm) 100%, 0 100%);
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-family: var(--font-heading);
+  font-size: 1.5em;
+}
+.header__top > * {
+  margin: 0;
+}
+.header__top h1 {
+  text-transform: uppercase;
+}
+.header__top h2 {
+  color: var(--text-negative);
+}
+.header__bottom {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 1cm;
+  padding-top: 0.5cm;
+}
+.header__about p {
+  text-align: justify;
+  hyphens: auto;
+}
+.header__contacts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: space-between;
+}
+.header__contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+.header__contacts__item .list-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

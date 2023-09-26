@@ -1,0 +1,59 @@
+@use 'utilities' as u;
+
+.header{
+    background-color: var(--bg-medium);
+    color: var(--text-negative);
+    padding: 0.75cm;
+    clip-path: polygon(0 1cm, 1cm 0, 100% 0, 100% calc(100% - 1cm), calc(100% - 1cm) 100%, 0 100%);
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        border-bottom: 2px solid var(--accent-color);
+        color: var(--accent-color);
+        font-family: var(--font-heading);
+        font-size: 1.5em;
+        
+        >*{
+            margin: 0;
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        h2{
+            color: var(--text-negative);
+        }
+
+    }
+    &__bottom{
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        gap: 1cm;
+        padding-top: 0.5cm;
+        
+    }
+    &__about{
+        p{
+            text-align: justify;
+            hyphens: auto;
+        }
+    }
+    &__contacts{
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            justify-content: space-between;
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            gap: 0.75em;
+            .list-label{
+                @include u.sr-only;
+            }
+            
+        }
+    }
+}
