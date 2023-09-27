@@ -14,6 +14,15 @@
     h2{
         background-color: var(--bg-medium);
         color: var(--accent-color);
+        &::before{
+            content: "";
+            width: 2px;
+            display: block;
+            height: 100%;
+            left: -1px;
+            top: 0;
+            background-color: var(--bg-medium);
+        }
     }
     h3{
         

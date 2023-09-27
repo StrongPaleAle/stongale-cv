@@ -5,7 +5,8 @@
     color: var(--text-negative);
     padding: 0.75cm;
     clip-path: polygon(0 1cm, 1cm 0, 100% 0, 100% calc(100% - 1cm), calc(100% - 1cm) 100%, 0 100%);
-
+    position: relative;
+    
     &__top{
         display: flex;
         justify-content: space-between;
@@ -21,7 +22,7 @@
         h1{
             text-transform: uppercase;
         }
-        h2{
+        p{
             color: var(--text-negative);
         }
 
@@ -43,12 +44,18 @@
         }
     }
     &__contacts{
+        h3{
+            margin-bottom: 0.5em;
+            &::before{
+                content: none;
+            }
+        }
         ul{
             display: flex;
             flex-direction: column;
-            gap: 0.5em;
+            gap: 0.75em;
             justify-content: space-between;
-            height: 100%;
+            
             font-size: 10px;
             padding-block: 5px;
         }

@@ -13,6 +13,9 @@ body {
     font-family: var(--font-text);
     color: var(--text-color);
     font-size: 12px;
+    > svg{
+      display: none;
+    }
   }
   
   a {
@@ -27,6 +30,17 @@ body {
     margin-bottom: 0.5cm;
     display: flex;
     flex-direction: column;
+    position: relative;
+    &::before{
+      content: "";
+      width: 1cm;
+      height: 1cm;
+      background-color: var(--accent-color);
+      position: absolute;
+      left: 0;
+      top:  0;
+      
+  }
   }
   
   page[size="A4"] {  

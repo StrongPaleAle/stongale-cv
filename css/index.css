@@ -30,6 +30,9 @@ body {
   color: var(--text-color);
   font-size: 12px;
 }
+body > svg {
+  display: none;
+}
 
 a {
   color: inherit;
@@ -43,6 +46,16 @@ page {
   margin-bottom: 0.5cm;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+page::before {
+  content: "";
+  width: 1cm;
+  height: 1cm;
+  background-color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 page[size=A4] {
@@ -151,7 +164,7 @@ h3 span::after {
 }
 
 article {
-  margin-block: 2em;
+  margin-block: 1.5em;
 }
 
 .header {
@@ -159,6 +172,7 @@ article {
   color: var(--text-negative);
   padding: 0.75cm;
   clip-path: polygon(0 1cm, 1cm 0, 100% 0, 100% calc(100% - 1cm), calc(100% - 1cm) 100%, 0 100%);
+  position: relative;
 }
 .header__top {
   display: flex;
@@ -175,7 +189,7 @@ article {
 .header__top h1 {
   text-transform: uppercase;
 }
-.header__top h2 {
+.header__top p {
   color: var(--text-negative);
 }
 .header__bottom {
@@ -198,12 +212,17 @@ article {
   text-align: justify;
   hyphens: auto;
 }
+.header__contacts h3 {
+  margin-bottom: 0.5em;
+}
+.header__contacts h3::before {
+  content: none;
+}
 .header__contacts ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.75em;
   justify-content: space-between;
-  height: 100%;
   font-size: 10px;
   padding-block: 5px;
 }
@@ -218,6 +237,16 @@ article {
   color: var(--text-negative);
   padding: 0 0.75cm;
   height: 100%;
+  position: relative;
+}
+.sidebar::before {
+  content: "";
+  width: 100%;
+  height: 0.5cm;
+  background-color: var(--bg-medium);
+  position: absolute;
+  left: 0;
+  top: -0.25cm;
 }
 .sidebar ul {
   display: flex;
@@ -266,6 +295,9 @@ article {
   font-size: max(10px, 1.5em);
   font-weight: 900;
 }
+.sidebar .education h3 {
+  margin-bottom: 0.5em;
+}
 .sidebar .education p + p {
   margin-top: 0.5em;
 }
@@ -287,6 +319,15 @@ article {
 .experiences h2 {
   background-color: var(--bg-medium);
   color: var(--accent-color);
+}
+.experiences h2::before {
+  content: "";
+  width: 2px;
+  display: block;
+  height: 100%;
+  left: -1px;
+  top: 0;
+  background-color: var(--bg-medium);
 }
 .experiences h3 {
   color: var(--bg-medium);
