@@ -1,0 +1,31 @@
+.sidebar{
+    background-color: var(--bg-medium);
+    color: var(--text-negative);
+    padding: 0 0.75cm;
+    height: 100%;
+    
+    
+    
+    ul{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.75em;
+        justify-content: center;
+        align-items: center;
+        li{
+            @for $i from 1 through 10{
+                &[data-rate="#{$i}"]{
+                    
+                    font-size: max(10px, #{$i * 0.15}em);
+                    font-weight: #{($i - 1) * 100};
+                }
+            }
+        }
+    }
+    .education{
+        p + p{
+            margin-top: 0.5em;
+        }
+        
+    }
+}

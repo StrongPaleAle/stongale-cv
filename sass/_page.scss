@@ -25,6 +25,8 @@ body {
     display: block;
     margin: 0 auto;
     margin-bottom: 0.5cm;
+    display: flex;
+    flex-direction: column;
   }
   
   page[size="A4"] {  
@@ -38,5 +40,13 @@ body {
      margin: 0mm;
      border: none;
      border-collapse: collapse;
+     overflow: hidden;
   }
   /* End Printing */
+
+  .main-content{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 270px 1fr;
+
+  }

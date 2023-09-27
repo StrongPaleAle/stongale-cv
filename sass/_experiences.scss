@@ -1,0 +1,62 @@
+.experiences{
+    padding: 0 0.75cm;
+    position: relative;
+    &::before{
+        content: "";
+        width: 0.5cm;
+        height: 0.5cm;
+        background-color: var(--bg-medium);
+        position: absolute;
+        left: -0.05cm;
+        top:  -0.05cm;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    h2{
+        background-color: var(--bg-medium);
+        color: var(--accent-color);
+    }
+    h3{
+        
+        color: var(--bg-medium);
+        &::before{
+            background-color: var(--bg-medium);
+        }
+        span{
+            &::after{
+                background-color: var(--bg-medium);
+            }
+        }
+    }
+    .exp-info{
+        display: flex;
+        gap: 1.5em;
+    }
+    .list-item{
+        &__icon{
+            color: var(--bg-medium);
+        }
+    }
+    .exp-feature{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-block: 1em;
+        padding-left: 1.2em;
+        font-size: 11px;
+        margin-top: 1.5em;
+        li{
+            position: relative;
+            &::before{
+                content: '';
+                width: 0.5em;
+                height: 0.5em;
+                display: block;
+                background-color: var(--bg-medium);
+                top: 0.4em;
+                left: -1em;
+                position: absolute;
+                clip-path: polygon(0 0.1em,0.1em 0, 0.5em 0, 0.5em 0.4em,0.4em 0.5em, 0 0.5em);
+            }
+        }
+    }
+}
