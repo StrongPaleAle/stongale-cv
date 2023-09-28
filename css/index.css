@@ -30,6 +30,9 @@ body {
   color: var(--text-color);
   font-size: 12px;
 }
+body > svg {
+  display: none;
+}
 
 a {
   color: inherit;
@@ -151,7 +154,7 @@ h3 span::after {
 }
 
 article {
-  margin-block: 2em;
+  margin-block: 1.5em;
 }
 
 .header {
