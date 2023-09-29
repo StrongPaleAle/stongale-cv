@@ -4,7 +4,8 @@
     background-color: var(--bg-medium);
     color: var(--text-negative);
     padding: 0.75cm;
-    clip-path: polygon(0 1cm, 1cm 0, 100% 0, 100% calc(100% - 1cm), calc(100% - 1cm) 100%, 0 100%);
+    position: relative;
+    clip-path: polygon(0 0.75cm, 0.75cm 0, 100% 0, 100% calc(100% - 1cm), calc(100% - 1cm) 100%, 0 100%);
 
     &__top{
         display: flex;
@@ -16,13 +17,16 @@
         font-size: 1.5em;
         
         >*{
-            margin: 0;
+            margin-block: 0;
         }
         h1{
             text-transform: uppercase;
+            padding-right: 3em;
+            margin-bottom: -2px;
         }
-        h2{
+        p{
             color: var(--text-negative);
+            text-transform: uppercase;
         }
 
     }
@@ -39,7 +43,7 @@
     &__about{
         p{
             text-align: justify;
-            hyphens: auto;
+            
         }
     }
     &__contacts{
@@ -59,6 +63,22 @@
             
             
             
+        }
+    }
+    .html-link{
+        text-decoration: none;
+        color: var(--accent-color);
+        position: absolute;
+        right: 0.75cm;
+        top: 0.25cm;
+        
+        span{
+            text-decoration: underline;
+            vertical-align: middle;
+            display: inline-block;
+            svg{
+                margin-top: 0.3em;
+            }
         }
     }
 }

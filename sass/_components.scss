@@ -28,16 +28,28 @@ ul, ol {
         color: var(--accent-color);
     }
 }
-h2{
-    background-color: var(--accent-color);
+.slant-title{
+    --h2-bg: var(--accent-color);
+    background-color: var(--h2-bg);
     color: var(--text-color);
     font-family: var(--font-heading);
     text-transform: uppercase;
     padding-block: 2px;
     padding-left: 0.75cm;
     margin-left: -0.755cm;
-    margin-right: -0.7cm;
-    clip-path: polygon(0 0, 100% 0 ,calc(100% - 0.7cm) 100% ,0 100%);
+    //margin-right: -0.7cm;
+    position: relative;
+    //border-right: 1em solid var(--h2-bg);
+    &::after{
+        content: "";
+        aspect-ratio: 1/1;
+        height: 100%;
+        background-color: var(--h2-bg);
+        position: absolute;
+        left: calc(100% - 1px);
+        top: 0;
+        clip-path: polygon(0 0, 100% 0, 1px 100%, 0 100%);
+    }
 }
 h3{
     font-family: var(--font-heading);

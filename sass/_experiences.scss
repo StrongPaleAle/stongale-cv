@@ -12,8 +12,17 @@
         clip-path: polygon(0 0, 100% 0, 0 100%);
     }
     h2{
-        background-color: var(--bg-medium);
+        --h2-bg: var(--bg-medium);
         color: var(--accent-color);
+        &::before{
+            content: "";
+            height: 100%;
+            width: 3px;
+            position: absolute;
+            left: -1px;
+            top: 0;
+            background-color: var(--h2-bg);
+        }
     }
     h3{
         
@@ -30,6 +39,26 @@
     .exp-info{
         display: flex;
         gap: 1.5em;
+        &.interests{
+            
+            font-weight: 500;
+            column-gap: 1.5em;
+            justify-content: center;
+            font-size: 10px;
+            
+            .list-item{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5em;
+                text-align: center;
+                &__icon{
+                    font-size: 1.5em;
+                }
+                
+            }
+        }
     }
     .list-item{
         &__icon{
