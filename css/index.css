@@ -89,14 +89,6 @@ main[size=A4] {
     display: none;
   }
 }
-@media screen and (max-width: 20.99cm) {
-  main[size=A4], body {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-  }
-}
 .icon {
   width: 1em;
   height: 1em;
