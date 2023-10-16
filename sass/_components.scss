@@ -36,12 +36,13 @@ ul, ol {
     text-transform: uppercase;
     padding-block: 2px;
     padding-left: 0.75cm;
-    margin-left: -0.755cm;
+    margin-left: -0.75cm;
     //margin-right: -0.7cm;
     position: relative;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 0.75cm) 100%, 0 100%);
     //border-right: 1em solid var(--h2-bg);
     &::after{
-        content: "";
+        //content: "";
         aspect-ratio: 1/1;
         height: 100%;
         background-color: var(--h2-bg);

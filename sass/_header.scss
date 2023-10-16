@@ -9,6 +9,7 @@
 
     &__top{
         display: flex;
+        
         justify-content: space-between;
         align-items: end;
         border-bottom: 2px solid var(--accent-color);
@@ -23,6 +24,7 @@
             text-transform: uppercase;
             padding-right: 3em;
             margin-bottom: -2px;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 1.25cm) 100%, 0 100%);
         }
         p{
             color: var(--text-negative);
@@ -71,7 +73,7 @@
         position: absolute;
         right: 0.75cm;
         top: 0.25cm;
-        
+        font-size: 12pt;
         span{
             text-decoration: underline;
             vertical-align: middle;
