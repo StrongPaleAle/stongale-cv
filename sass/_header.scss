@@ -3,9 +3,14 @@
 .header{
     background-color: var(--bg-medium);
     color: var(--text-negative);
-    padding: 0.75cm;
+    padding: var(--padding);
     position: relative;
-    clip-path: polygon(0 0.75cm, 0.75cm 0, 100% 0, 100% calc(100% - 1cm), calc(100% - 1cm) 100%, 0 100%);
+    clip-path: polygon(
+        0 var(--slant), var(--slant) 0,
+        100% 0, 
+        100% calc(100% - var(--slant) - var(--slant) / 3), calc(100% - var(--slant) - var(--slant) / 3) 100%, 
+        0 100%
+    );
 
     &__top{
         display: flex;
@@ -24,7 +29,12 @@
             text-transform: uppercase;
             padding-right: 3em;
             margin-bottom: -2px;
-            clip-path: polygon(0 0, 100% 0, calc(100% - 1.25cm) 100%, 0 100%);
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                calc(100% - var(--slant) - var(--slant) / 1.5) 100%,
+                0 100%
+            );
         }
         p{
             color: var(--text-negative);
@@ -59,11 +69,11 @@
             padding-block: 5px;
         }
         &__item{
-            display: flex;
-            align-items: center;
-            gap: 0.75em;
-            
-            
+            > *{
+                display: flex;
+                align-items: center;
+                gap: 0.75em;
+            }
             
         }
     }
@@ -71,7 +81,7 @@
         text-decoration: none;
         color: var(--accent-color);
         position: absolute;
-        right: 0.75cm;
+        right: var(--padding);
         top: 0.25cm;
         font-size: 12pt;
         span{

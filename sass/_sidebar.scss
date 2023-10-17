@@ -1,9 +1,11 @@
 .sidebar{
     background-color: var(--bg-medium);
     color: var(--text-negative);
-    padding: 0 0.75cm;
+    padding: 0 var(--padding);
     height: 100%;
     position: relative;
+    --tag-base: 10px;
+    --tag-grow: 0.15em;
     &::before{
         content: "";
         width: 100%;
@@ -36,7 +38,7 @@
             @for $i from 1 through 10{
                 &[data-rate="#{$i}"]{
                     
-                    font-size: max(10px, #{$i * 0.15}em);
+                    font-size: max(var(--tag-base), calc(#{$i} * var(--tag-grow)));
                     font-weight: #{($i - 1) * 100};
                 }
             }

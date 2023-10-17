@@ -1,27 +1,89 @@
 @media screen and (max-width: 20.99cm){
-    main[size="A4"], body {  
-        width: 100%;
-        max-width: 100%;
-        height: auto; 
-        margin: 0;
-        font-size: 1rem;
+  :root{
+    --padding: 1rem;
+    --slant: 1.5rem;
+  }
+  main[size="A4"], body {  
+  
+    width: 100%;
+    max-width: 100%;
+    height: auto; 
+    margin: 0;
+    font-size: 1rem;
+  }
+  .main-content{
+    grid-template-columns: 1fr;
+  }
+  .header{
+    margin-bottom: 10px;
+    padding-top: 2.5rem;
+    &__top{
+      flex-direction: column;
+      align-items: stretch;
+      h1{
+        --slant: 1rem;
+        font-size: clamp(1.5rem, 4.3vw + 1rem, 3.5rem);
+        padding-right: 1.25em;
+        
       }
-      .main-content{
-        grid-template-columns: 1fr;
+      p{
+        margin-top: 0.5em;
+        text-align: right;
       }
-      .header{
-        &__top{
-          flex-direction: column;
-          align-items: start;
-          p{
-            margin-top: 0.5em;
-          }
-        }
-        &__bottom{
-          grid-template-columns: 1fr;
+    }
+    &__bottom{
+      grid-template-columns: 1fr;
+      gap: 1.5em;
+      
+    }
+    &__about{
+      order: 2;
+      p{
+          text-align: left;
+          font-size: 0.8em;
           
+      }
+    }
+    &__contacts{
+      order: 1;
+      ul{
+        
+        justify-content: space-between;
+        
+        gap: 1em;
+        font-size: 0.8em;
+        li{
+          padding: 0;
         }
       }
+    }
+  }
+  .sidebar{
+    --tag-base: 12px;
+    --tag-grow: 0.2em;
+  }
+  .exp-info{
+    flex-wrap: wrap;
+    row-gap: 0.75em;
+    margin-bottom: 20px;
+    
+    &.interests{
+      font-size: 1rem;
+      row-gap: 1.25em;
+      .list-item{
+        flex: 0 1 140px;
+
+        &__value{
+          font-size: 0.8em;
+        }
+      }
+      
+    }
+  }
+  .experiences .exp-feature{
+    font-size: 0.8em;
+    margin-block: 2.5em 4em;
+  }
 
       
 }
