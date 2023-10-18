@@ -3,7 +3,7 @@
 ::before,
 ::after {
 	box-sizing: border-box;
-  line-height: 1.3;
+  line-height: 1.375;
   shape-rendering: geometricPrecision;
   text-rendering: optimizeLegibility;
 }
@@ -13,10 +13,11 @@ body {
     width: 21cm;
     height: 29.7cm;
     margin: 0 auto;
+    word-spacing: -0.3em;
     font-family: var(--font-text);
     color: var(--text-color);
     font-size: 12px;
-    line-height: 1.3;
+    line-height: 1.5;
     > svg{
         display: none;
     }

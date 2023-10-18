@@ -12,7 +12,7 @@
   --extra-light: hsl(319, 100%, 92%);
   --font-text: "Roboto Mono", monospace;
   --font-heading: "Rubik", sans-serif;
-  --padding: 0.75cm;
+  --padding: 0.7cm;
   --slant: var(--padding);
 }
 
@@ -21,7 +21,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
-  line-height: 1.3;
+  line-height: 1.375;
   shape-rendering: geometricPrecision;
   text-rendering: optimizeLegibility;
 }
@@ -31,10 +31,11 @@ body {
   width: 21cm;
   height: 29.7cm;
   margin: 0 auto;
+  word-spacing: -0.3em;
   font-family: var(--font-text);
   color: var(--text-color);
   font-size: 12px;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 body > svg {
   display: none;
@@ -135,25 +136,23 @@ ul, ol {
   background-color: var(--h2-bg);
   color: var(--text-color);
   font-family: var(--font-heading);
+  font-weight: 600;
+  word-spacing: normal;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding-block: 2px;
   padding-left: var(--padding);
   margin-left: calc(-1 * var(--padding));
+  margin-bottom: 1.4em;
   position: relative;
   clip-path: polygon(0 0, 100% 0, calc(100% - var(--slant)) 100%, 0 100%);
-}
-.slant-title::after {
-  aspect-ratio: 1/1;
-  height: 100%;
-  background-color: var(--h2-bg);
-  position: absolute;
-  left: calc(100% - 1px);
-  top: 0;
-  clip-path: polygon(0 0, 100% 0, 1px 100%, 0 100%);
 }
 
 h3 {
   font-family: var(--font-heading);
+  word-spacing: normal;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent-color);
   overflow: hidden;
@@ -201,16 +200,16 @@ article {
 }
 .exp-info .list-item__value {
   font-size: 13px;
-  word-spacing: -0.5em;
+  word-spacing: -0.4em;
   line-height: 1;
 }
-.exp-info.interests {
+.exp-info.interests-info {
   font-weight: 500;
   column-gap: 0.25em;
   justify-content: center;
   font-size: 10px;
 }
-.exp-info.interests .list-item {
+.exp-info.interests-info .list-item {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -218,12 +217,12 @@ article {
   gap: 0.25em;
   text-align: center;
 }
-.exp-info.interests .list-item__icon {
+.exp-info.interests-info .list-item__icon {
   font-size: 1.5em;
 }
-.exp-info.interests .list-item__value {
+.exp-info.interests-info .list-item__value {
   font-size: 11px;
-  word-spacing: -0.5em;
+  word-spacing: -0.4em;
   line-height: 1.2;
 }
 
@@ -232,7 +231,7 @@ article {
   color: var(--text-negative);
   padding: var(--padding);
   position: relative;
-  clip-path: polygon(0 var(--slant), var(--slant) 0, 100% 0, 100% calc(100% - var(--slant) - var(--slant) / 3), calc(100% - var(--slant) - var(--slant) / 3) 100%, 0 100%);
+  clip-path: polygon(0 calc(var(--slant) / 1.5), calc(var(--slant) / 1.5) 0, 100% 0, 100% calc(100% - var(--slant) - var(--slant) / 3), calc(100% - var(--slant) - var(--slant) / 3) 100%, 0 100%);
 }
 .header__top {
   display: flex;
@@ -241,6 +240,7 @@ article {
   border-bottom: 2px solid var(--accent-color);
   color: var(--accent-color);
   font-family: var(--font-heading);
+  word-spacing: normal;
   font-size: 1.5em;
 }
 .header__top > * {
@@ -250,6 +250,7 @@ article {
   text-transform: uppercase;
   padding-right: 3em;
   margin-bottom: -2px;
+  line-height: 1.1;
   clip-path: polygon(0 0, 100% 0, calc(100% - var(--slant) - var(--slant) / 1.5) 100%, 0 100%);
 }
 .header__top p {
@@ -281,13 +282,13 @@ article {
   gap: 0.5em;
   justify-content: space-between;
   height: 100%;
-  font-size: 10px;
+  font-size: 12px;
   padding-block: 5px;
 }
 .header__contacts__item > * {
   display: flex;
   align-items: center;
-  gap: 0.75em;
+  gap: 0.5em;
 }
 .header .html-link {
   text-decoration: none;
@@ -309,9 +310,10 @@ article {
 .sidebar {
   background-color: var(--bg-medium);
   color: var(--text-negative);
-  padding: 0 var(--padding);
+  padding-inline: var(--padding);
   height: 100%;
   position: relative;
+  container-name: sidebar;
   --tag-base: 10px;
   --tag-grow: 0.15em;
 }
@@ -336,9 +338,12 @@ article {
 .sidebar ul {
   display: flex;
   flex-flow: row wrap;
-  gap: 0.75em;
+  column-gap: 0.75em;
+  row-gap: 0.3em;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2em;
+  line-height: 1.2;
 }
 .sidebar ul li[data-rate="1"] {
   font-size: max(var(--tag-base), 1 * var(--tag-grow));
@@ -380,8 +385,20 @@ article {
   font-size: max(var(--tag-base), 10 * var(--tag-grow));
   font-weight: 900;
 }
+.sidebar .education {
+  margin-top: 2.5em;
+}
 .sidebar .education p + p {
   margin-top: 0.5em;
+}
+.sidebar .education p:first-of-type {
+  font-size: 1.2em;
+}
+.sidebar .education .small {
+  font-size: 1em;
+  word-spacing: -0.3em;
+  margin-bottom: 2.25em;
+  margin-top: 0.25em;
 }
 
 .experiences {
@@ -435,8 +452,8 @@ article {
 .experiences .exp-feature {
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  margin-block: 1em;
+  gap: 0.8em;
+  margin-block: 2.3em;
   padding-left: 1.2em;
   font-size: 11px;
   margin-top: 1.5em;
@@ -455,10 +472,13 @@ article {
   position: absolute;
   clip-path: polygon(0 0.1em, 0.1em 0, 0.5em 0, 0.5em 0.4em, 0.4em 0.5em, 0 0.5em);
 }
+.experiences .interests h2 {
+  margin-bottom: 1em;
+}
 
 @media screen and (max-width: 20.99cm) {
   :root {
-    --padding: 1rem;
+    --padding: max(1rem, calc(50vw - 250px));
     --slant: 1.5rem;
   }
   main[size=A4], body {
@@ -468,12 +488,15 @@ article {
     margin: 0;
     font-size: 1rem;
   }
+  h3 span::after {
+    width: 100vw;
+  }
   .main-content {
     grid-template-columns: 1fr;
   }
   .header {
     margin-bottom: 10px;
-    padding-top: 2.5rem;
+    padding-block: 2.5rem;
   }
   .header__top {
     flex-direction: column;
@@ -481,8 +504,8 @@ article {
   }
   .header__top h1 {
     --slant: 1rem;
-    font-size: clamp(1.5rem, 4.3vw + 1rem, 3.5rem);
-    padding-right: 1.25em;
+    font-size: clamp(1.5rem, 4.2vw + 1rem, 3.5rem);
+    padding-right: 1em;
   }
   .header__top p {
     margin-top: 0.5em;
@@ -519,19 +542,31 @@ article {
     row-gap: 0.75em;
     margin-bottom: 20px;
   }
-  .exp-info.interests {
+  .exp-info.interests-info {
     font-size: 1rem;
     row-gap: 1.25em;
   }
-  .exp-info.interests .list-item {
+  .exp-info.interests-info .list-item {
     flex: 0 1 140px;
   }
-  .exp-info.interests .list-item__value {
+}
+@media screen and (max-width: 20.99cm) and (min-width: 530px) {
+  .exp-info.interests-info .list-item {
+    flex: 0 1 120px;
+  }
+}
+@media screen and (max-width: 20.99cm) {
+  .exp-info.interests-info .list-item__value {
     font-size: 0.8em;
   }
   .experiences .exp-feature {
     font-size: 0.8em;
     margin-block: 2.5em 4em;
+  }
+}
+@media (max-width: 375px), (min-width: 21cm) {
+  h3 span.longer::after {
+    left: 176px;
   }
 }
 

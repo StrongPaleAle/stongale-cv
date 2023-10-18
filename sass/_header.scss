@@ -6,7 +6,7 @@
     padding: var(--padding);
     position: relative;
     clip-path: polygon(
-        0 var(--slant), var(--slant) 0,
+        0 calc(var(--slant) / 1.5), calc(var(--slant) / 1.5) 0,
         100% 0, 
         100% calc(100% - var(--slant) - var(--slant) / 3), calc(100% - var(--slant) - var(--slant) / 3) 100%, 
         0 100%
@@ -20,6 +20,7 @@
         border-bottom: 2px solid var(--accent-color);
         color: var(--accent-color);
         font-family: var(--font-heading);
+        word-spacing: normal;
         font-size: 1.5em;
         
         >*{
@@ -29,6 +30,7 @@
             text-transform: uppercase;
             padding-right: 3em;
             margin-bottom: -2px;
+            line-height: 1.1;
             clip-path: polygon(
                 0 0,
                 100% 0,
@@ -65,14 +67,14 @@
             gap: 0.5em;
             justify-content: space-between;
             height: 100%;
-            font-size: 10px;
+            font-size: 12px;
             padding-block: 5px;
         }
         &__item{
             > *{
                 display: flex;
                 align-items: center;
-                gap: 0.75em;
+                gap: 0.5em;
             }
             
         }

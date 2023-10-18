@@ -33,27 +33,25 @@ ul, ol {
     background-color: var(--h2-bg);
     color: var(--text-color);
     font-family: var(--font-heading);
+    font-weight: 600;
+    word-spacing: normal;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     padding-block: 2px;
     padding-left: var(--padding);
     margin-left: calc(-1 * var(--padding));
+    margin-bottom: 1.4em;
     //margin-right: -0.7cm;
     position: relative;
     clip-path: polygon(0 0, 100% 0, calc(100% - var(--slant)) 100%, 0 100%);
     //border-right: 1em solid var(--h2-bg);
-    &::after{
-        //content: "";
-        aspect-ratio: 1/1;
-        height: 100%;
-        background-color: var(--h2-bg);
-        position: absolute;
-        left: calc(100% - 1px);
-        top: 0;
-        clip-path: polygon(0 0, 100% 0, 1px 100%, 0 100%);
-    }
+    
 }
 h3{
     font-family: var(--font-heading);
+    word-spacing: normal;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent-color);
     overflow: hidden;
@@ -99,11 +97,11 @@ article{
 
         &__value{
             font-size: 13px;
-            word-spacing: -0.5em;
+            word-spacing: -0.4em;
             line-height: 1;
         }
     }
-    &.interests{
+    &.interests-info{
         
         font-weight: 500;
         column-gap: 0.25em;
@@ -122,7 +120,7 @@ article{
             }
             &__value{
                 font-size: 11px;
-                word-spacing: -0.5em;
+                word-spacing: -0.4em;
                 line-height: 1.2;
             }
             

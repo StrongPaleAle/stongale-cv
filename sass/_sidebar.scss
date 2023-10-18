@@ -1,9 +1,10 @@
 .sidebar{
     background-color: var(--bg-medium);
     color: var(--text-negative);
-    padding: 0 var(--padding);
+    padding-inline: var(--padding);
     height: 100%;
     position: relative;
+    container-name: sidebar;
     --tag-base: 10px;
     --tag-grow: 0.15em;
     &::before{
@@ -31,9 +32,13 @@
     ul{
         display: flex;
         flex-flow: row wrap;
-        gap: 0.75em;
+        column-gap: 0.75em;
+        row-gap: 0.3em;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2em;
+        line-height: 1.2;
+        
         li{
             @for $i from 1 through 10{
                 &[data-rate="#{$i}"]{
@@ -45,8 +50,21 @@
         }
     }
     .education{
-        p + p{
-            margin-top: 0.5em;
+        margin-top: 2.5em;
+        p {
+            + p{
+                margin-top: 0.5em;
+            }
+            &:first-of-type{
+                font-size: 1.2em;
+            }
+            
+        }
+        .small{
+            font-size: 1em;
+            word-spacing: -0.3em;
+            margin-bottom: 2.25em;
+            margin-top: 0.25em;
         }
         
     }
